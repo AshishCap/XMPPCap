@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22E925745E6636DF6CC04332 /* Pods_XMPPCap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46852AB17E3E70F66461E85 /* Pods_XMPPCap.framework */; };
 		75B70FC722AA44DF00CD0EAC /* XMPPCap.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B70FC522AA44DF00CD0EAC /* XMPPCap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75B70FCE22AA452A00CD0EAC /* XMPPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B70FCD22AA452A00CD0EAC /* XMPPService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		396393439570F44333150FE9 /* Pods-XMPPCap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMPPCap.release.xcconfig"; path = "Target Support Files/Pods-XMPPCap/Pods-XMPPCap.release.xcconfig"; sourceTree = "<group>"; };
 		75B70FC222AA44DF00CD0EAC /* XMPPCap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMPPCap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B70FC522AA44DF00CD0EAC /* XMPPCap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMPPCap.h; sourceTree = "<group>"; };
 		75B70FC622AA44DF00CD0EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75B70FCD22AA452A00CD0EAC /* XMPPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPService.swift; sourceTree = "<group>"; };
+		C46852AB17E3E70F66461E85 /* Pods_XMPPCap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMPPCap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43B910BE4424402F130D4AE /* Pods-XMPPCap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMPPCap.debug.xcconfig"; path = "Target Support Files/Pods-XMPPCap/Pods-XMPPCap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,17 +27,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E925745E6636DF6CC04332 /* Pods_XMPPCap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EC29E53F3133F6E964B4368 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C46852AB17E3E70F66461E85 /* Pods_XMPPCap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63481FCC7214BED288CFB740 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F43B910BE4424402F130D4AE /* Pods-XMPPCap.debug.xcconfig */,
+				396393439570F44333150FE9 /* Pods-XMPPCap.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		75B70FB822AA44DF00CD0EAC = {
 			isa = PBXGroup;
 			children = (
 				75B70FC422AA44DF00CD0EAC /* XMPPCap */,
 				75B70FC322AA44DF00CD0EAC /* Products */,
+				63481FCC7214BED288CFB740 /* Pods */,
+				1EC29E53F3133F6E964B4368 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75B70FCA22AA44DF00CD0EAC /* Build configuration list for PBXNativeTarget "XMPPCap" */;
 			buildPhases = (
+				C1DA2E1478C360C22BCCD573 /* [CP] Check Pods Manifest.lock */,
 				75B70FBD22AA44DF00CD0EAC /* Headers */,
 				75B70FBE22AA44DF00CD0EAC /* Sources */,
 				75B70FBF22AA44DF00CD0EAC /* Frameworks */,
@@ -128,6 +154,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C1DA2E1478C360C22BCCD573 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XMPPCap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		75B70FBE22AA44DF00CD0EAC /* Sources */ = {
@@ -265,6 +316,7 @@
 		};
 		75B70FCB22AA44DF00CD0EAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F43B910BE4424402F130D4AE /* Pods-XMPPCap.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -291,6 +343,7 @@
 		};
 		75B70FCC22AA44DF00CD0EAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 396393439570F44333150FE9 /* Pods-XMPPCap.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
