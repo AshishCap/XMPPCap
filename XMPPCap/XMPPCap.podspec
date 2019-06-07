@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "XMPPCap"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "XMPP framework XMPPCap."
   spec.description  = "New XMPPCap for XMPP framework with custom methods"
 
@@ -20,7 +20,7 @@ Pod::Spec.new do |spec|
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
-  spec.source       = { :git => "https://github.com/AshishCap/XMPPCap.git", :tag => "1.0.0" }
+  spec.source       = { :git => "https://github.com/AshishCap/XMPPCap.git", :tag => "1.0.1" }
   spec.source_files  = "XMPPCap/**/*.{h,m,swift}"
   spec.swift_versions  = "4.2"
   #spec.exclude_files = "Classes/Exclude"
