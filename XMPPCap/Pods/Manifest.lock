@@ -14,7 +14,7 @@ PODS:
     - libidn (~> 1.35)
 
 DEPENDENCIES:
-  - XMPPFramework
+  - XMPPFramework (from `https://github.com/robbiehanson/XMPPFramework.git`, branch `master`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -22,7 +22,16 @@ SPEC REPOS:
     - CocoaLumberjack
     - KissXML
     - libidn
-    - XMPPFramework
+
+EXTERNAL SOURCES:
+  XMPPFramework:
+    :branch: master
+    :git: https://github.com/robbiehanson/XMPPFramework.git
+
+CHECKOUT OPTIONS:
+  XMPPFramework:
+    :commit: 19e8d02b83e3fcf9eb5d4cd115031fe73fd7360b
+    :git: https://github.com/robbiehanson/XMPPFramework.git
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
@@ -31,6 +40,6 @@ SPEC CHECKSUMS:
   libidn: e4576a956b797c584c77aaedfc6e3dd639b61bdc
   XMPPFramework: 5d31ff9f73dce031b24bc49bcf88093627a3a86e
 
-PODFILE CHECKSUM: 81910953ba33e115dc56e3897e7ed76c68361b6a
+PODFILE CHECKSUM: f823832275c5dd13bb5346f363fd20e2be42e5c8
 
 COCOAPODS: 1.7.0
