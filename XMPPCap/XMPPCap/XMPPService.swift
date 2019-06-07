@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import XMPPFramework
+
+public class XMPPService
+{
+    private init() {}
+    
+    public static func LoginAndAuthenticateWith(username: String, password: String)
+    {
+        XMPPConnectionManager.shared()?.authenticateUserWIthUSerName(username, withPassword: password)
+    }
+}

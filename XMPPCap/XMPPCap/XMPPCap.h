@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMPPCap/XMPPUserManager.h"
+#import "XMPPCap/XMPPConnectionManager.h"
+#import "XMPPCap/ChatContact.h"
+#import "XMPPCap/ChatMessages.h"
+#import "XMPPCap/ChatMessageHistory.h"
 
 //! Project version number for XMPPCap.
 FOUNDATION_EXPORT double XMPPCapVersionNumber;

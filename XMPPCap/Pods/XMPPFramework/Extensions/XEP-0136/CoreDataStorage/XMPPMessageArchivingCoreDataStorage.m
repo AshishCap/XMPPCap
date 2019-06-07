@@ -152,10 +152,7 @@ static XMPPMessageArchivingCoreDataStorage *sharedInstance;
 #pragma mark Private API
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (XMPPMessageArchiving_Message_CoreDataObject *)composingMessageWithJid:(XMPPJID *)messageJid
-                                                               streamJid:(XMPPJID *)streamJid
-                                                                outgoing:(BOOL)isOutgoing
-                                                    managedObjectContext:(NSManagedObjectContext *)moc
+- (XMPPMessageArchiving_Message_CoreDataObject *)composingMessageWithJid:(XMPPJID *)messageJid streamJid:(XMPPJID *)streamJid outgoing:(BOOL)isOutgoing managedObjectContext:(NSManagedObjectContext *)moc
 {
 	XMPPMessageArchiving_Message_CoreDataObject *result = nil;
 	
